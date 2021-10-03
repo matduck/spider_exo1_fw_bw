@@ -1,4 +1,3 @@
-let Enable = 0
 input.onButtonPressed(Button.AB, function () {
     if (Enable == 1) {
         Enable = 0
@@ -6,6 +5,8 @@ input.onButtonPressed(Button.AB, function () {
         Enable = 1
     }
 })
+let Enable = 0
+Enable = 0
 basic.forever(function () {
     if (Enable == 1) {
         basic.showIcon(IconNames.Happy)
