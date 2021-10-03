@@ -64,7 +64,9 @@ basic.forever(function () {
         Stop()
         while (Enable == 0) {
             basic.showIcon(IconNames.Square)
+            SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Orange))
             basic.showIcon(IconNames.SmallSquare)
+            SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Yellow))
             basic.showLeds(`
                 . . . . .
                 . . . . .
@@ -72,8 +74,11 @@ basic.forever(function () {
                 . . . . .
                 . . . . .
                 `)
+            SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Indigo))
             basic.showIcon(IconNames.SmallDiamond)
+            SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Purple))
             basic.showIcon(IconNames.Diamond)
+            SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Red))
         }
     }
 })
