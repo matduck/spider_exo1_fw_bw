@@ -32,7 +32,7 @@ function GoBackward () {
     SuperBit.MotorRun(SuperBit.enMotors.M1, 255)
     SuperBit.MotorRun(SuperBit.enMotors.M3, 255)
     AffichageLed(false, true, false)
-    basic.showIcon(IconNames.Skull)
+    basic.showIcon(IconNames.Surprised)
     basic.pause(3000)
 }
 function Stop () {
@@ -62,6 +62,18 @@ basic.forever(function () {
     }
     if (Enable == 0) {
         Stop()
-        basic.showString("OFF")
+        while (Enable == 0) {
+            basic.showIcon(IconNames.Square)
+            basic.showIcon(IconNames.SmallSquare)
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . # . .
+                . . . . .
+                . . . . .
+                `)
+            basic.showIcon(IconNames.SmallDiamond)
+            basic.showIcon(IconNames.Diamond)
+        }
     }
 })
