@@ -25,5 +25,8 @@ basic.forever(function () {
         SuperBit.MotorRun(SuperBit.enMotors.M3, 0)
         basic.showIcon(IconNames.Sad)
         basic.pause(1000)
+    } else {
+        basic.showString("Off")
+        SuperBit.RGB_Program().showColor(neopixel.colors(NeoPixelColors.Red))
     }
 })
